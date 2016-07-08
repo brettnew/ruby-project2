@@ -2,6 +2,9 @@ require('rspec')
 require('definition')
 
 describe(Definition) do
+  before() do
+    Definition.clear()
+  end
 
   describe("#definition") do
     it("lets you give it a definition") do
