@@ -9,4 +9,10 @@ describe(Definition) do
       expect(test_definition.definition()).to(eq("an intense feeling of deep affection"))
     end
   end
+
+  describe(".all") do
+    it("is empty at first") do
+      expect(Definition.all()).to(eq([]))
+    end
+  end
 end
