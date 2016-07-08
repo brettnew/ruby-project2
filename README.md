@@ -37,7 +37,7 @@ Git Hub Webpage: https://brettnew.github.io/ruby-project2
 
 Git Hub Repository: https://github.com/brettnew/ruby-project2
 
-Heroku app:
+Heroku app: https://aqueous-bastion-64842.herokuapp.com/
 
 ### License
 
