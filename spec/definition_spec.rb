@@ -23,4 +23,12 @@ describe(Definition) do
       expect(Definition.all()).to(eq([test_definition]))
     end
   end
+
+  describe(".clear") do
+    it("empties out all of the saved definitions") do
+      Definition.new("an intense feeling of deep affection").save()
+      Definition.clear()
+      expect(Definition.all()).to(eq([]))
+    end
+  end
 end
