@@ -1,3 +1,13 @@
 <h1>Welcome to Your Personal Dictionary!</h1>
-<a href="/word"> See Words</a>
-<a href="/word/new">Add New Word</a>
+<h4>Your Words:</h4>
+<ul>
+  <% @words.each() do |word| %>
+  <li><%= word.name_of_word() %></li>
+  <% end %>
+</ul>
+<h5>Add New Word</h5>
+<form class="form-group" action="/words" method="post">
+  <label for="new_word">New Word:</label>
+  <input type="text" name="new_word" id="new_word">
+  <button type="submit">Add Word</button>
+</form>

@@ -7,10 +7,10 @@ describe(Word) do
     Word.clear()
   end
 
-  describe("#word") do
+  describe("#name_of_word") do
     it("lets you give it a word") do
       test_word = Word.new("love")
-      expect(test_word.word()).to(eq("love"))
+      expect(test_word.name_of_word()).to(eq("love"))
     end
   end
 
@@ -49,6 +49,14 @@ describe(Word) do
       test_definition = Definition.new("an intense feeling of deep affection")
       test_word.add_definition(test_definition)
       expect(test_word.definitions()).to(eq([test_definition]))
+    end
+  end
+
+  describe("#id") do
+    it("returns the id of the word") do
+      test_word = Word.new("love")
+      test_word.save()
+      expect(test_word.id()).to(eq(1))
     end
   end
 
