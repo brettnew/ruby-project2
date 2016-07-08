@@ -31,4 +31,13 @@ describe(Definition) do
       expect(Definition.all()).to(eq([]))
     end
   end
+
+  describe("#id") do
+    it("returns the id of the definition") do
+      test_definition = Definition.new("an intense feeling of deep affection")
+      test_definition.save()
+      expect(test_definition.id()).to(eq(1))
+    end
+  end
+
 end

@@ -2,7 +2,7 @@
 <h4>Your Words:</h4>
 <ul>
   <% @words.each() do |word| %>
-  <li><%= word.name_of_word() %></li>
+  <li><a href="/words/<%=word.id() %>"><%= word.name_of_word() %></a></li>
   <% end %>
 </ul>
 <h5>Add New Word</h5>

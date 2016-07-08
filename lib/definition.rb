@@ -3,6 +3,7 @@ class Definition
 
   define_method(:initialize) do |definition|
     @definition = definition
+    @id = @@all_definitions.length().+(1)
   end
 
   define_method(:definition) do
@@ -19,5 +20,9 @@ class Definition
 
   define_singleton_method(:clear) do
     @@all_definitions = []
+  end
+
+  define_method(:id) do
+    @id
   end
 end
