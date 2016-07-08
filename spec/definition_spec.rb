@@ -40,4 +40,13 @@ describe(Definition) do
     end
   end
 
+  describe(".find") do
+    it("returns a definition by its id number") do
+      test_definition = Definition.new("an intense feeling of deep affection")
+      test_definition.save()
+      test_definition2 = Definition.new("two friends")
+      test_definition2.save()
+      expect(Definition.find(test_definition.id())).to(eq(test_definition))
+    end
+  end
 end
