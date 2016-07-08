@@ -17,4 +17,8 @@ class Word
     @@all_words.push(self)
   end
 
+  define_singleton_method(:clear) do
+    @@all_words = []
+  end
+
 end

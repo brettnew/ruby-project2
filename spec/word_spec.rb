@@ -2,8 +2,8 @@ require('rspec')
 require('word')
 
 describe(Word) do
-  describe('#word') do
-    it('lets you give it a word') do
+  describe("#word") do
+    it("lets you give it a word") do
       test_word = Word.new("love")
       expect(test_word.word()).to(eq("love"))
     end
@@ -20,6 +20,14 @@ describe(Word) do
       test_word = Word.new("love")
       test_word.save()
       expect(Word.all()).to(eq([test_word]))
+    end
+  end
+
+  describe(".clear") do
+    it("empties out all of the saved words") do
+      Word.new("love").save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
     end
   end
 
