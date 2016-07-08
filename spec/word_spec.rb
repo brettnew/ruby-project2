@@ -8,4 +8,11 @@ describe(Word) do
       expect(test_word.word()).to(eq("love"))
     end
   end
+
+  describe(".all") do
+    it("is empty at first") do
+      expect(Word.all()).to(eq([]))
+    end
+  end
+  
 end
