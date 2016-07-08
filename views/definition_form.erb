@@ -1,7 +1,7 @@
 <h1>Add a definition to <%= @words.name() %></h1>
 
 <form class="form-group" action="/definitions" method="post">
-  <input type="hidden" name="dealership_id" id="dealership_id" value="<%= @definition.id() %>">
+  <input type="hidden" name="definition_id" id="definition_id" value="<%= @definition.id() %>">
 
   <label for="new_definition">Definition:</label>
   <input type="text" name="new_definition" id="new_definition">
